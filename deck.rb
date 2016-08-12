@@ -1,21 +1,15 @@
-
-require 'cards'
-
 class Deck
+  attr_reader :full_deck
 
-
-
-  def intialize(array_of_card_objects)
-    @cards = array_of_card_objects
+  def initialize
     @full_deck = []
   end
 
-  def populate_deck
-    @cards.each do |card|
+  def populate_deck(array_of_card_objects)
+    array_of_card_objects.each do |card|
       @full_deck << card
     end
     @full_deck
   end
 
 end
-
