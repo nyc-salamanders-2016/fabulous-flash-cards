@@ -1,6 +1,3 @@
-
-require_relative 'parser'
-
 class Deck
   attr_reader :full_deck
 
@@ -17,8 +14,8 @@ class Deck
 
 end
 
-parser = CardParser.new('raccoon_flashcard_data.txt')
-# parser.card_arr
-deck = Deck.new(parser.card_arr)
-p deck.populate_deck
+# parser = CardParser.new('raccoon_flashcard_data.txt')
+# # parser.card_arr
+# deck = Deck.new(parser.card_arr)
+# p deck.populate_deck
 
