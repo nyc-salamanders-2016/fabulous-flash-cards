@@ -13,9 +13,3 @@ class Deck
   end
 
 end
-
-# parser = CardParser.new('raccoon_flashcard_data.txt')
-# # parser.card_arr
-# deck = Deck.new(parser.card_arr)
-# p deck.populate_deck
-

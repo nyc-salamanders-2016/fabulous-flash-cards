@@ -19,14 +19,20 @@ class Controller
   end
 
   def run
+
     create_deck
+    correct_count = 0
     @full_deck.each do |card|
-      @view.#display question(card)
-      @view.#get user input
-      @view.#say if it's right
-      @view.#
-    end
-    @view.#display number of questions correct out of total
+      @view.print_question(card.question)
+      answer = @view.get_user_info
+        if answer == card.answer
+          @view.correct_answer(card.answer)
+          correct_count += 1
+        else
+          @view.wrong_answer(answer)
+        end
+      end
+    @view.display_final_count(correct_count, @total_questions )
   end
 
 end

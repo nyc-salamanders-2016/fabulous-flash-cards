@@ -32,3 +32,9 @@ end
 def get_user_input
   STDIN.gets.chomp
 end
+
+def display_final_count(answers, total_questions)
+  puts "You got #{answers} out of #{total_questions} correct"
+
+end
+
