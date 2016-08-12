@@ -16,14 +16,17 @@ class CardParser
   end
 
   def parse_data
-    file_arr = File.open(@file).readlines
+    file_arr = []
+    File.open(@file).readlines.each do |line|
+      if line != "\n"
+        file_arr << line
+      end
+    end
     card_arr = []
-    file_arr.each do |line|
-      hash = {}
-      hash[:question] = file_arr[0].slice(0..-2)
-      hash[:answer] = file_arr[1].slice(0..-2)
-      card_arr << hash
-      3.times {file_arr.shift}
+    file_arr.each_index do |i|
+      if i.even?
+        card_arr << {question:file_arr[i], answer: file_arr[i+1]}
+      end
     end
     card_arr
   end

@@ -16,25 +16,27 @@ class View
   #   puts "You got #{right_answers} out of #{total_questions} right."
   # end
 
-def print_question(question)
-  puts "#{question}"
-end
+  def print_question(question)
+    puts "#{question}"
+  end
 
-def correct_answer(correct_answer)
-   puts "#{correct_answer} is correct!!!"
-end
+  def correct_answer(correct_answer)
+     puts "#{correct_answer} is correct!!!"
+  end
 
 
-def wrong_answer(user_input)
-  puts "#{user_input} is incorrect!!!"
-end
+  def wrong_answer(user_input)
+    puts "#{user_input} is incorrect!!!"
+  end
 
-def get_user_input
-  STDIN.gets.chomp
-end
+  def get_user_input
+    STDIN.gets.chomp
+  end
 
-def display_final_count(answers, total_questions)
-  puts "You got #{answers} out of #{total_questions} correct"
+  def display_final_count(answers, total_questions)
+    puts "You got #{answers} out of #{total_questions} correct"
+
+  end
 
 end
 
