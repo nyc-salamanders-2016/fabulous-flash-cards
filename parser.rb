@@ -1,7 +1,16 @@
 class CardParser
 
+  # require_relative 'card'
+
   def initialize(file)
     @file = file
+  end
+
+  def card
+    if @card_arr
+      @card_arr
+    else
+      @card_arr = create_card_array
   end
 
   def parse_data
@@ -17,4 +26,14 @@ class CardParser
     card_arr
   end
 
+  def create_card_array
+    card_arr = parse_data
+    card_arr.map! do |card|
+      card_instance = Card.new(card)
+    end
+  end
 end
+
+
+
+
