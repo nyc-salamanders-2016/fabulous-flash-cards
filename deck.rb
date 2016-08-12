@@ -1,11 +1,9 @@
 
-require 'cards'
+require_relative 'parser'
 
 class Deck
 
-
-
-  def intialize(array_of_card_objects)
+  def initialize(array_of_card_objects)
     @cards = array_of_card_objects
     @full_deck = []
   end
@@ -18,3 +16,9 @@ class Deck
   end
 
 end
+
+parser = CardParser.new('raccoon_flashcard_data.txt')
+# parser.card_arr
+deck = Deck.new(parser.card_arr)
+p deck.populate_deck
+

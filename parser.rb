@@ -1,16 +1,18 @@
-class CardParser
+ require_relative 'cards'
 
-  # require_relative 'card'
+class CardParser
+# attr_reader :card_arr
 
   def initialize(file)
     @file = file
   end
 
-  def card
+  def card_arr
     if @card_arr
       @card_arr
     else
       @card_arr = create_card_array
+    end
   end
 
   def parse_data
@@ -34,6 +36,8 @@ class CardParser
   end
 end
 
+# parser = CardParser.new('raccoon_flashcard_data.txt')
+# p parser.card_arr
 
 
 
