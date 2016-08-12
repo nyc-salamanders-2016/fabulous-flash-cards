@@ -31,6 +31,6 @@ class Controller
 
 end
 
-runner = Controller.new({parser: CardParser.new(file), view: View.new, deck: Deck.new})
+# runner = Controller.new({parser: CardParser.new(file), view: View.new, deck: Deck.new})
 
-runner.create_deck
+# runner.create_deck
